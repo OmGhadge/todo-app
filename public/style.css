@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f8f9fa;
+    --primary-color: #ffffff;
+    --secondary-color: #6c757d;
+    --accent-color: #4361ee;
+    --text-color: #212529;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Fredoka', sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+.navbar {
+    height: 70px;
+    background-color: var(--primary-color);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-container h1 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.list-tags {
+    text-decoration: none;
+    
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.list-tags:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.main-container {
+    margin-top: 90px;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outer-pg {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    overflow: visible; /* allow the label to overflow above */
+    position: relative;
+}
+
+.progressFill {
+    background-color: var(--accent-color);
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.5s ease;
+    position: relative; /* so label is positioned relative to the fill */
+    overflow: visible; /* allow span to overflow */
+}
+
+.progressFill span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-5px); /* move label above the bar */
+    background-color: var(--accent-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 1; /* ensure it appears above other elements */
+}
+
+
+.in-container {
+    background-color: var(--primary-color);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.entry {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.entry input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.entry input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+#insertBtn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#insertBtn:hover {
+    background-color: #3651d4;
+    transform: translateY(-2px);
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.todo:hover {
+    transform: translateX(-4px);
+}
+
+.todo-title {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.edit-btn, .del-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.del-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.edit-btn:hover, .del-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.customCheckbox {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todo-checkbox{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .customCheckbox {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+input[type="checkbox"]:checked ~ .customCheckbox svg{
+fill: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .hideOnMobile {
+        display: none;
+    }
+    
+    .menu-button {
+        display: block;
+    }
+    
+    .main-container {
+        padding: 16px;
+    }
+    
+    .entry {
+        flex-direction: column;
+    }
+    
+    #insertBtn {
+        width: 100%;
+    }
+}
+
+.sidebar{
+    height: 100vh;
+    width: 250px;
+   
+    background-color: rgba(255, 255, 255, 0.327);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    position: fixed;
+    list-style: none;
+    right: 0;
+    top: 0;
+    z-index: 1001;
+    display: none;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebarul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    height: 100%;  
+    /* ← Add this line */
+}
+
+
+#about , #blog{
+ 
+    display: block;
+}
+
+#closeBtn{
+    box-shadow: var(--box-shadow);
+       border: none;
+}
+
+.sidebar a{
+    width: 100%;
+}
+.sidebarul #version{
+ 
+    margin-top: auto;
+    padding:  30px;
+}
+
+.menu-button{
+    display: none;
+}
+
+@media(max-width:540px){
+    html{
+        font-size:12pt;
+    }
+    #insertBtn{
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+    
+        h1 {
+            font-size: clamp(1.2rem, 10vw, 2rem); 
+          }
+          img {
+            height: clamp(30px, 10vw, 60px);
+            width: auto;
+          }
+          
+}
+@media (max-width:750px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media (max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}

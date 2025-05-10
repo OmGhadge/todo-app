@@ -1,0 +1,53 @@
+{
+  "users": [
+    {},
+    {
+      "id": "889001a6-2fe3-496c-9c7a-361a5148655c",
+      "name": "omg",
+      "password": "$2b$10$2pzLJ3REuVEjKg0uRv540.6Ed9o6g/XbD1AuRIcB5IoIQq.7hCM5m",
+      "createdAt": "2025-05-08T20:30:55.422Z"
+    },
+    {
+      "id": "2244533e-23b0-4f7b-a321-1a81af9c644a",
+      "name": "john",
+      "password": "$2b$10$DB2t2UfyQZWWUfqpVdkr3.nvWFh0CNNsPnVit6wNpNTBwdNrhOXYm",
+      "createdAt": "2025-05-08T20:32:20.197Z"
+    },
+    {
+      "id": "de2f86ac-4f5b-4de4-ab7e-295829aeeee6",
+      "name": "john1",
+      "password": "$2b$10$H2leCYvh6YnYzVUIfaYf5eLz4GkqOMqPBLVc707oTxccHiTQDd2M6",
+      "createdAt": "2025-05-08T20:38:27.375Z"
+    }
+  ],
+  "todos": [
+    {
+      "id": "00779264-3cfb-45fe-b300-8fd531b4f4af",
+      "title": "new johns todo...edited",
+      "completed": false,
+      "createdAt": "2025-05-08T20:36:35.636Z",
+      "userId": "2244533e-23b0-4f7b-a321-1a81af9c644a"
+    },
+    {
+      "id": "24fc1c72-8237-482b-80cf-82a63258700d",
+      "title": "Shoot a Video",
+      "completed": true,
+      "createdAt": "2025-05-09T16:31:40.364Z",
+      "userId": "de2f86ac-4f5b-4de4-ab7e-295829aeeee6"
+    },
+    {
+      "id": "6df4dd79-9fae-4878-ab06-9fff8b2dfdd3",
+      "title": "Go to gym",
+      "completed": false,
+      "createdAt": "2025-05-09T16:31:57.707Z",
+      "userId": "de2f86ac-4f5b-4de4-ab7e-295829aeeee6"
+    },
+    {
+      "id": "52b26e30-e85e-41bd-a49c-76d259cd0851",
+      "title": "Meditate",
+      "completed": true,
+      "createdAt": "2025-05-09T19:31:13.507Z",
+      "userId": "de2f86ac-4f5b-4de4-ab7e-295829aeeee6"
+    }
+  ]
+}

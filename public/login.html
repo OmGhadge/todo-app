@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Todo App</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-content">
+            <div class="auth-form-container">
+                <div class="auth-header">
+                    <h1>Welcome Back</h1>
+                    <p>Please enter your credentials to continue</p>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="username">
+                            <i class="fas fa-user"></i>
+                            Username
+                        </label>
+                        <input 
+                            class="input" 
+                            type="text" 
+                            id="username"
+                            name="username" 
+                            placeholder="Enter your username" 
+                            required 
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i>
+                            Password
+                        </label>
+                        <input 
+                            class="input" 
+                            type="password" 
+                            id="password"
+                            name="password" 
+                            placeholder="Enter your password" 
+                            required 
+                        />
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button id="btnSubmit" type="submit">
+                        <span>Login</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div class="auth-footer">
+                        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                    </div>
+                </form>
+
+                <div id="loginError" class="error-message" role="alert" aria-live="polite"></div>
+            </div>
+
+            <div class="auth-image">
+                <img class="ui-img" src="/images/Screenshot 2025-05-10 010324.png" alt="Todo App Interface Preview">
+                <div class="image-overlay">
+                    <h2>Organize Your Tasks</h2>
+                    <p>Stay productive and manage your tasks efficiently</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
