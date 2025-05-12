@@ -4,6 +4,7 @@ const express = require('express');
 const {v4:uuidv4}=require('uuid');
 const bcrypt=require('bcrypt');
 const app = express();
+const path=require('path');
 const session=require("express-session");
 app.use(session(
     {
@@ -19,7 +20,7 @@ app.use(session(
 
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/', (req, res) => {
     res.redirect('/signup.html');
